@@ -4,6 +4,8 @@ function callFallbackIfFunc(fallback, callback){
   if(typeof fallback === 'function'){
     return fallback(callback)
   }
+
+  return callback(fallback)
 }
 
 module.exports = exports = function(fallback){
@@ -13,13 +15,13 @@ module.exports = exports = function(fallback){
     init: () => {},
     detect: async function(callback){
       try {
-        AsyncStorage.getItem('@i18next-async-storage/user-language')
+        AsyncStorage.getItem('@i18next-async-storage/user-languageee')
           .then(language => {
             if(language){
               return callback(language)
             }
 
-            callFallbackIfFunc(fallback, callback)
+            return callFallbackIfFunc(fallback, callback)
           })
       } catch(error){
         callFallbackIfFunc(fallback, callback)
@@ -28,7 +30,7 @@ module.exports = exports = function(fallback){
     },
     cacheUserLanguage: function(language){
       try {
-        AsyncStorage.setItem('@i18next-async-storage/user-language', language)
+        AsyncStorage.setItem('@i18next-async-storage/user-languageee', language)
       } catch(error){
 
       }

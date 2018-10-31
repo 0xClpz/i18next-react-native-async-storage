@@ -19,10 +19,14 @@ i18n
 
 ## Fallback mechanism
 
-You can pass a callback function to the plugin in case it fails to find the user's language in the local storage (typically on the app's first run):
+You can pass a fallback function or language to the plugin in case it fails to find the user's language in the local storage (typically on the app's first run):
 
 ```JavaScript
+// With a fallback language
+i18n
+  .use(AsyncStoragePlugin('en'))
 
+// With a fallback function
 const detectUserLanguage = (callback) => {
   return Expo
     .DangerZone
