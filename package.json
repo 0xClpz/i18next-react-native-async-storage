@@ -1,6 +1,6 @@
 {
   "name": "i18next-react-native-async-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "repository": "github.com/0xClpz/i18next-react-native-async-storage",
   "author": "Antonio Calapez <antonio.root@gmail.com>",
