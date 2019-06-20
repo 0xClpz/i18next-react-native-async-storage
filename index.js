@@ -15,7 +15,7 @@ module.exports = exports = function(fallback){
     init: () => {},
     detect: async function(callback){
       try {
-        AsyncStorage.getItem('@i18next-async-storage/user-language')
+        await AsyncStorage.getItem('@i18next-async-storage/user-language')
           .then(language => {
             if(language){
               return callback(language)
