@@ -12,5 +12,11 @@
     "i18next",
     "async-storage",
     "Asyng storage"
-  ]
+  ],
+  "devDependencies": {
+    "i18next": "13.0.1"
+  },
+  "peerDependencies": {
+    "i18next": ">=13.0.1"
+  }
 }
