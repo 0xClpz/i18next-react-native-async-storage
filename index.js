@@ -28,9 +28,9 @@ module.exports = exports = function(fallback){
       }
 
     },
-    cacheUserLanguage: function(language){
+    cacheUserLanguage: async function(language){
       try {
-        AsyncStorage.setItem('@i18next-async-storage/user-language', language)
+        await AsyncStorage.setItem('@i18next-async-storage/user-language', language)
       } catch(error){
 
       }
