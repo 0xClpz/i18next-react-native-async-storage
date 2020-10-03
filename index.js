@@ -1,4 +1,4 @@
-const AsyncStorage = require('react-native').AsyncStorage
+const AsyncStorage = (require('@react-native-community/async-storage') || require('react-native')).AsyncStorage
 
 function callFallbackIfFunc(fallback, callback){
   if(typeof fallback === 'function'){
