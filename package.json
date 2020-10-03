@@ -7,7 +7,10 @@
     "index.js",
     "index.d.ts"
   ],
-  "repository": "github.com/0xClpz/i18next-react-native-async-storage",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xClpz/i18next-react-native-async-storage.git"
+  },
   "author": "Antonio Calapez <antonio.root@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -23,5 +26,9 @@
   },
   "peerDependencies": {
     "i18next": ">=13.0.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/0xClpz/i18next-react-native-async-storage/issues"
+  },
+  "homepage": "https://github.com/0xClpz/i18next-react-native-async-storage#readme"
 }
