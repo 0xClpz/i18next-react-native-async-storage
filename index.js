@@ -1,4 +1,13 @@
-const AsyncStorage = (require('@react-native-community/async-storage') || require('react-native')).AsyncStorage
+
+function requireIfAvailable (path) {
+  try {
+      return require(path);
+  } catch (e) {
+      return false;
+  }
+}
+
+const AsyncStorage = (requireIfAvailable('@react-native-async-storage/async-storage') || requireIfAvailable('@react-native-community/async-storage') || requireIfAvailable('react-native')).AsyncStorage
 
 function callFallbackIfFunc(fallback, callback){
   if(typeof fallback === 'function'){
