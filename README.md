@@ -6,7 +6,7 @@ This plugin caches your user's language in React Native's Async storage
 
 Install using:
 ```Bash
-yarn install i18next-react-native-async-storage
+yarn add i18next-react-native-async-storage
 ```
 
 Then pass it to your i18n instance
