@@ -1,13 +1,4 @@
-
-function requireIfAvailable (path) {
-  try {
-      return require(path);
-  } catch (e) {
-      return false;
-  }
-}
-
-const AsyncStorage = (requireIfAvailable('@react-native-async-storage/async-storage') || requireIfAvailable('@react-native-community/async-storage') || requireIfAvailable('react-native')).AsyncStorage
+const AsyncStorage = require('@react-native-async-storage/async-storage').default;
 
 function callFallbackIfFunc(fallback, callback){
   if(typeof fallback === 'function'){
@@ -41,7 +32,7 @@ module.exports = exports = function(fallback){
       try {
         await AsyncStorage.setItem('@i18next-async-storage/user-language', language)
       } catch(error){
-
+        console.error(error)
       }
     }
   }
